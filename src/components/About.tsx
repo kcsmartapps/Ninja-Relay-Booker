@@ -22,9 +22,9 @@ export default function About() {
               <span className="text-emerald-400 text-sm font-medium">About Us</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-              Built by Bookers,{' '}
+              Built by Trucker Carriers,{' '}
               <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                for Bookers
+                for Truckers Carriers
               </span>
             </h2>
             <div className="space-y-4 text-gray-400 text-lg leading-relaxed">

@@ -48,8 +48,8 @@ export default function Footer() {
               {[
                 { name: 'Chrome Web Store', href: 'https://chromewebstore.google.com/detail/ninja-relay-booker-pro/hlcpcjjgcmimpmbgjknkaljhajlenofl' },
             //    { name: 'Documentation', href: '#' },
-                { name: 'Privacy Policy', href: 'https://kcsmartapps.github.io/Ninja-Relay-Booker/privacy-policy.html' },
-                { name: 'Terms of Service', href: 'https://kcsmartapps.github.io/Ninja-Relay-Booker/terms-of-service.html' },
+                { name: 'Privacy Policy', href: 'https://kcsmartapps.github.io/Kc-Smart-Auto-Booker/ninja-privacy-policy.html' },
+                { name: 'Terms of Service', href: 'https://kcsmartapps.github.io/Kc-Smart-Auto-Booker/ninja-terms-of-service.html' },
               ].map((link) => (
                 <li key={link.name}>
                   <a
@@ -73,7 +73,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Ninja Relay Booker. All rights reserved.
           </p>
           <div className="flex items-center gap-1 text-gray-600 text-sm">
-            Made with <span className="text-red-500 mx-1">❤</span> for bookers worldwide
+            Made with <span className="text-red-500 mx-1">❤</span> for Truckers worldwide
           </div>
         </div>
       </div>

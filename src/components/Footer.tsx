@@ -1,5 +1,7 @@
 import { Zap, ArrowUpRight } from 'lucide-react';
 
+const LOGO_URL = "https://r.jina.ai/i/05e07669d0684f88ba6734292f7f90c4";
+
 export default function Footer() {
   return (
     <footer className="relative border-t border-white/5">
@@ -7,9 +9,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="#home" className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
-                <Zap className="w-4 h-4 text-[#0a0a0f]" strokeWidth={2.5} />
+            <a href="#home" className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-emerald-500/30">
+                <img src={LOGO_URL} alt="Ninja Logo" className="w-full h-full object-cover scale-110" />
               </div>
               <span className="text-lg font-bold">
                 <span className="text-white">Ninja</span>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -8,6 +8,8 @@ const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Contact', href: '#contact' },
 ];
+
+const LOGO_URL = "https://r.jina.ai/i/05e07669d0684f88ba6734292f7f90c4";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,12 +32,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2.5 group">
+          <a href="#home" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center shadow-lg shadow-emerald-500/25 group-hover:shadow-emerald-500/50 transition-shadow duration-300">
-                <Zap className="w-5 h-5 text-[#0a0a0f]" strokeWidth={2.5} />
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-emerald-500/30 group-hover:border-emerald-500 transition-colors duration-300">
+                <img 
+                  src={LOGO_URL} 
+                  alt="Ninja Logo" 
+                  className="w-full h-full object-cover scale-110"
+                />
               </div>
-              <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full animate-ping opacity-75" />
+              <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full animate-ping opacity-75" />
             </div>
             <span className="text-lg font-bold tracking-tight">
               <span className="text-white">Ninja</span>

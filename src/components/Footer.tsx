@@ -1,6 +1,6 @@
 import { Zap, ArrowUpRight } from 'lucide-react';
 
-const LOGO_URL = "https://r.jina.ai/i/05e07669d0684f88ba6734292f7f90c4";
+const LOGO_URL = "https://raw.githubusercontent.com/kcsmartapps/Ninja-Relay-Booker/refs/heads/main/Ninja-Relay-Booker-Logo.gif";
 
 export default function Footer() {
   return (

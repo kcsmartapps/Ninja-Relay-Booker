@@ -9,7 +9,7 @@ const navLinks = [
   { name: 'Contact', href: '#contact' },
 ];
 
-const LOGO_URL = "https://raw.githubusercontent.com/kcsmartapps/Ninja-Relay-Booker/refs/heads/main/ninja-logo.png";
+const LOGO_URL = "https://raw.githubusercontent.com/kcsmartapps/Ninja-Relay-Booker/refs/heads/main/Ninja-Relay-Booker-Logo.gif";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

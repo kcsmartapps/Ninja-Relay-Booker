@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Ninja Relay Booker</title>
+  <link rel="icon" type="image/png" href="/images/ninja-relay-logo.png" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #0a0a0f; color: #f0f0f5; font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    ::selection { background-color: rgba(6,214,160,0.25); color: #f0f0f5; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #111118; }
+    ::-webkit-scrollbar-thumb { background: #2d2d3a; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3a3a4a; }
+
+    .header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(10,10,15,0.8); border-bottom: 1px solid #2a2a38; }
+    .header-inner { max-width: 1024px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo img { width: 36px; height: 36px; border-radius: 8px; }
+    .logo span { font-size: 18px; font-weight: 700; background: linear-gradient(to right, #06d6a0, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav { display: flex; align-items: center; gap: 4px; }
+    .nav a { padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500; color: #a0a0b5; transition: all 0.2s; }
+    .nav a:hover { color: #f0f0f5; background: #1a1a24; }
+    .nav a.active { background: #23232f; color: #06d6a0; box-shadow: 0 4px 12px rgba(6,214,160,0.1); }
+    .nav a.tos-link:hover { color: #8b5cf6; }
+
+    .main { max-width: 896px; margin: 0 auto; padding: 64px 24px; }
+
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 999px; background: rgba(6,214,160,0.1); border: 1px solid rgba(6,214,160,0.2); font-size: 12px; font-weight: 500; color: #06d6a0; margin-bottom: 24px; }
+    .badge svg { width: 14px; height: 14px; }
+
+    h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 16px; }
+    h1 span { background: linear-gradient(to right, #06d6a0, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .meta { display: flex; align-items: center; gap: 16px; font-size: 14px; color: #6b6b80; }
+    .meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #3a3a4a; }
+
+    .intro-box { margin-top: 24px; padding: 16px; border-radius: 12px; background: rgba(26,26,36,0.5); border: 1px solid #2a2a38; }
+    .intro-box p { font-size: 14px; color: #a0a0b5; line-height: 1.7; }
+
+    .sections { margin-top: 56px; display: flex; flex-direction: column; gap: 48px; }
+
+    .section-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
+    .section-num { flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px; background: #23232f; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #06d6a0; border: 1px solid #2a2a38; }
+    .section-title-wrap { display: flex; align-items: center; gap: 12px; }
+    .section-dot { width: 6px; height: 6px; border-radius: 50%; background: #06d6a0; opacity: 0.8; }
+    .section-title { font-size: 20px; font-weight: 600; color: #f0f0f5; }
+
+    .section-body { margin-left: 48px; color: #a0a0b5; line-height: 1.7; display: flex; flex-direction: column; gap: 12px; }
+    .section-body p { font-size: 15px; }
+
+    .card { padding: 16px; border-radius: 12px; background: rgba(26,26,36,0.4); border: 1px solid #2a2a38; }
+    .card h4 { font-size: 14px; font-weight: 600; color: #f0f0f5; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+    .card h4 svg { width: 16px; height: 16px; color: #06d6a0; }
+    .card p { font-size: 14px; }
+    .card a { color: #06d6a0; }
+    .card a:hover { text-decoration: underline; }
+
+    .list-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; }
+    .list-item svg { width: 16px; height: 16px; color: #06d6a0; flex-shrink: 0; margin-top: 2px; }
+    .list-item strong { color: #f0f0f5; }
+
+    .warning-box { padding: 16px; border-radius: 12px; background: rgba(245,158,11,0.05); border: 1px solid rgba(245,158,11,0.15); display: flex; align-items: flex-start; gap: 12px; }
+    .warning-box svg { width: 20px; height: 20px; color: #f59e0b; flex-shrink: 0; margin-top: 2px; }
+    .warning-box p { font-size: 14px; color: rgba(253,230,138,0.8); }
+
+    .contact-box { padding: 20px; border-radius: 12px; background: linear-gradient(135deg, rgba(6,214,160,0.05), rgba(59,130,246,0.05)); border: 1px solid rgba(6,214,160,0.15); display: flex; align-items: center; gap: 12px; }
+    .contact-box svg { width: 16px; height: 16px; color: #06d6a0; flex-shrink: 0; }
+    .contact-box a { font-size: 14px; color: #06d6a0; }
+    .contact-box a:hover { text-decoration: underline; }
+
+    .divider { border: none; border-top: 1px solid #2a2a38; }
+
+    .last-updated { padding: 16px; border-radius: 12px; background: rgba(26,26,36,0.3); border: 1px solid #2a2a38; text-align: center; font-size: 14px; color: #6b6b80; }
+    .last-updated strong { color: #a0a0b5; }
+
+    .footer { border-top: 1px solid #2a2a38; background: rgba(17,17,24,0.5); }
+    .footer-inner { max-width: 1024px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    .footer-left { display: flex; align-items: center; gap: 12px; }
+    .footer-left img { width: 28px; height: 28px; border-radius: 6px; }
+    .footer-left span { font-size: 14px; color: #6b6b80; }
+    .footer-right { display: flex; align-items: center; gap: 24px; }
+    .footer-right a { font-size: 14px; color: #6b6b80; transition: color 0.2s; }
+    .footer-right a:hover { color: #06d6a0; }
+    .footer-right a.tos:hover { color: #8b5cf6; }
+
+    @media (max-width: 640px) {
+      .header-inner { flex-direction: column; gap: 12px; }
+      .section-body { margin-left: 0; }
+      .meta { flex-wrap: wrap; gap: 8px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="https://kcsmartapps.github.io/Ninja-Relay-Booker/#home" class="logo">
+        <img src="https://raw.githubusercontent.com/kcsmartapps/Ninja-Relay-Booker/refs/heads/main/Ninja-Relay-Booker-Logo.gif" alt="Ninja Relay Booker" />
+        <span>Ninja Relay Booker</span>
+      </a>
+      <nav class="nav">
+        <a href="/privacy-policy.html" class="active">Privacy Policy</a>
+        <a href="/terms-of-service.html" class="tos-link">Terms of Service</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- Page Header -->
+    <div class="badge">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      Legal Document
+    </div>
+    <h1><span>Privacy Policy</span></h1>
+    <div class="meta">
+      <span>Ninja Relay Booker</span>
+      <span class="meta-dot"></span>
+      <span>Effective Date: 06/23/2026</span>
+    </div>
+    <div class="intro-box">
+      <p>Ninja Relay Team ("Company," "we," "our," or "us") operates the Chrome extension known as Ninja Relay Booker (the "Extension"). This Privacy Policy explains what information we collect, how we use it, and under what circumstances we may share it. By using the Extension, you agree to the handling of information as described below.</p>
+    </div>
+
+    <!-- Sections -->
+    <div class="sections">
+
+      <!-- 01 -->
+      <section>
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <div class="section-title-wrap">
+            <div class="section-dot"></div>
+            <h2 class="section-title">Information We Collect</h2>
+          </div>
+        </div>
+        <div class="section-body">
+          <p>When you use the Extension, we may collect limited types of information necessary to provide and maintain service:</p>
+          <div class="card">
+            <h4>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+              User Account Details
+            </h4>
+            <p>If you log in to your account, we may collect your name and email address associated with that account.</p>
+          </div>
+          <div class="card">
+            <h4>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+              Payment Information
+            </h4>
+            <p>Subscriptions and payments are managed securely through Stripe, our third-party payment processor. We do not handle or store your sensitive financial details (such as credit card numbers). Please refer to <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Stripe's Privacy Policy</a> for further information about their practices.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- 02 -->
+      <section>
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <div class="section-title-wrap">
+            <div class="section-dot"></div>
+            <h2 class="section-title">How We Use Your Information</h2>
+          </div>
+        </div>
+        <div class="section-body">
+          <p>We collect and use information solely for purposes essential to delivering and supporting the Extension, including:</p>
+          <div class="list-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <div><strong>Access &amp; Functionality:</strong> Your user account information helps authenticate and enable the features of the Extension.</div>
+          </div>
+          <div class="list-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <div><strong>Communication:</strong> Your email may be used to send service notices, updates, billing reminders, security alerts, or important announcements directly related to the Extension. We do not use your information for advertising or unrelated marketing purposes.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- 03 -->
+      <section>
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <div class="section-title-wrap">
+            <div class="section-dot"></div>
+            <h2 class="section-title">Information Sharing &amp; Disclosure</h2>
+          </div>
+        </div>
+        <div class="section-body">
+          <p>We respect your privacy and will not sell, rent, or trade your information. However, we may share information in the following circumstances:</p>
+          <div class="card">
+            <h4>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              With Trusted Service Providers
+            </h4>
+            <p>For example, Stripe processes payments on our behalf. These providers have access only to the information needed to perform their services and are obligated not to disclose or misuse it.</p>
+          </div>
+          <div class="card">
+            <h4>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+              Legal Requirements
+            </h4>
+            <p>We may disclose information if required to do so by law, regulation, subpoena, or when necessary to protect safety, property, rights, or to prevent fraud or illegal activity.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- 04 -->
+      <section>
+        <div class="section-header">
+          <span class="section-num">04</span>
+          <div class="section-title-wrap">
+            <div class="section-dot"></div>
+            <h2 class="section-title">Data Security</h2>
+          </div>
+        </div>
+        <div class="section-body">
+          <p>We take the security of your information seriously and use industry-standard measures such as Secure Sockets Layer (SSL) encryption to protect data during transmission. However, as with all online systems, no storage or transmission method is completely free from risk.</p>
+          <div class="warning-box">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+            <p>While we aim to safeguard your data responsibly, we cannot guarantee absolute protection.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- 05 -->
+      <section>
+        <div class="section-header">
+          <span class="section-num">05</span>
+          <div class="section-title-wrap">
+            <div class="section-dot"></div>
+            <h2 class="section-title">Changes to This Policy</h2>
+          </div>
+        </div>
+        <div class="section-body">
+          <p>We may update this Privacy Policy periodically to reflect changes in technology, regulations, or our business practices. Updates become effective immediately upon posting. Your continued use of the Extension following any changes indicates acceptance of the revised policy.</p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- 06 -->
+      <section>
+        <div class="section-header">
+          <span class="section-num">06</span>
+          <div class="section-title-wrap">
+            <div class="section-dot"></div>
+            <h2 class="section-title">Contact Us</h2>
+          </div>
+        </div>
+        <div class="section-body">
+          <p>Questions, requests, or concerns about this Privacy Policy can be sent to us at:</p>
+          <div class="contact-box">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:ninjarelaybooker@gmail.com">ninjarelaybooker@gmail.com</a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Last Updated -->
+      <div class="last-updated">
+        <strong>Last Updated:</strong> 06/23/2026
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+  <script src="year.js"></script>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img src="https://raw.githubusercontent.com/kcsmartapps/Ninja-Relay-Booker/refs/heads/main/Ninja-Relay-Booker-Logo.gif" alt="Ninja Relay Booker" />
+        <span>&copy; <span id="year"></span> Ninja Relay Booker. All rights reserved.</span>
+      </div>
+      <div class="footer-right">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-of-service.html" class="tos">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

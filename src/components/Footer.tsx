@@ -48,8 +48,8 @@ export default function Footer() {
               {[
                 { name: 'Chrome Web Store', href: 'https://chromewebstore.google.com/detail/ninja-relay-booker-pro/hlcpcjjgcmimpmbgjknkaljhajlenofl' },
             //    { name: 'Documentation', href: '#' },
-                { name: 'Privacy Policy', href: '#' },
-                { name: 'Terms of Service', href: '#' },
+                { name: 'Privacy Policy', href: 'https://kcsmartapps.github.io/Ninja-Relay-Booker/privacy-policy.html' },
+                { name: 'Terms of Service', href: 'https://kcsmartapps.github.io/Ninja-Relay-Booker/terms-of-service.html' },
               ].map((link) => (
                 <li key={link.name}>
                   <a

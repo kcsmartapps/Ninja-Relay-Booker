@@ -45,7 +45,7 @@ export default function Navbar() {
             </div>
             <span className="text-lg font-bold tracking-tight">
               <span className="text-white">Ninja</span>
-              <span className="text-emerald-400"> Relay</span>
+              <span className="text-emerald-400"> Relay Booker</span>
             </span>
           </a>
 

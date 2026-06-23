@@ -9,7 +9,7 @@ const navLinks = [
   { name: 'Contact', href: '#contact' },
 ];
 
-const LOGO_URL = "https://r.jina.ai/i/05e07669d0684f88ba6734292f7f90c4";
+const LOGO_URL = "https://raw.githubusercontent.com/kcsmartapps/Ninja-Relay-Booker/refs/heads/main/ninja-logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

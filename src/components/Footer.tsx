@@ -47,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: 'Chrome Web Store', href: 'https://chromewebstore.google.com/detail/ninja-relay-booker-pro/hlcpcjjgcmimpmbgjknkaljhajlenofl' },
-             //   { name: 'Documentation', href: '#' },
+             
                 { name: 'Privacy Policy', href: '#' },
                 { name: 'Terms of Service', href: '#' },
               ].map((link) => (
